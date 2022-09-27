@@ -21,3 +21,4 @@ git status 	*(Qual é o status dos arquivos)*
 git commit 	*(Commita a ação ou em outra linguam, confirma a ação)*
 git push origin "nome, geralmente main ou master" *(Sobe para a nuvem/github)*
 git commit -m "Mensagem" *(Descrição)*
+git remote add origin LINK *(Adiciona o caminho do repositório)*
