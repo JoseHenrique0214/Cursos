@@ -1,14 +1,14 @@
 Comandos de navegação git
 Windows
 cd nome_pasta 	*(Navegação por pastas)*, cd .. *(Voltar)*
-dir 			*(Listagem)*
+dir 		*(Listagem)*
 mkdir 		*(Criação de pasta)*
 del / rmdir 	*(Deletar)*
-cls 			*(Limpar o console)*
+cls 		*(Limpar o console)*
 
 Unix
 cd nome_pasta	*(Navegação por pastas)*, cd .. *(Voltar)*
-ls		 		*(Listagem)*
+ls			*(Listagem)*
 mkdir 		*(Criação de pasta)*
 rm ou rf 	*(Deletar)*
 Clear 		*(Limpar o console)*
