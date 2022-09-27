@@ -1,0 +1,48 @@
+# **Projeto Salário Banco de Dados** :game_die:
+
+_Projeto com o objetivo de criar um banco de dados focado no gerenciamento de salário de uma empresa fictícia._
+
+Entidades e Atributos:
+
+- Funcionários
+
+  - PK Funcionario_ID int auto_increment;
+  - Nome varchar(50);
+  - Sobrenome varchar(50);
+  - CPF tinyint(11);
+  - Email varchar(200);
+  - Telefone tinyint(20);
+  - Salario_Bruto decimal(10,2);
+  - FK BeneficioVA_ID int;
+  - FK BeneficioVT_ID int;
+  - FK Endereco_Func_ID int;
+  - FK Departamento_ID int;
+  - FK Cargo_ID int;
+- Departamentos
+
+  - PK Departamento_ID int auto_increment;
+  - Nome_Departamento varchar(50);
+- Cargos
+
+  - PK Cargo_ID int auto_increment;
+  - Nome_Cargo varchar(50);
+- Beneficios_VA
+
+  - PK BeneficioVA_ID int auto_increment;
+  - Nome_Beneficio varchar(30);
+  - Desconto_Porcentagem float(10,1);
+- Beneficios_VT
+  - PK BeneficioVT_ID int auto_increment;
+  - Nome_Beneficio varchar(30);
+  - Desconto_Porcentagem float(10,1);
+- Enderecos_Funcionarios
+
+  - Endereco_Func_id int auto_increment;
+
+  - Cep int(15);
+  - Logradouro varchar(50);
+  - Numero_Casa tinyint(5);
+  - Cidade varchar(30);
+  - Estado varchar(30);
+  - Bairro varchar(50);
+  - FK Funcionario_ID;

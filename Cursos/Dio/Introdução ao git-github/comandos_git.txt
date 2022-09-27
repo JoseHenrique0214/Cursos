@@ -1,0 +1,23 @@
+Comandos de navegação git
+Windows
+cd nome_pasta 	*(Navegação por pastas)*, cd .. *(Voltar)*
+dir 			*(Listagem)*
+mkdir 		*(Criação de pasta)*
+del / rmdir 	*(Deletar)*
+cls 			*(Limpar o console)*
+
+Unix
+cd nome_pasta	*(Navegação por pastas)*, cd .. *(Voltar)*
+ls		 		*(Listagem)*
+mkdir 		*(Criação de pasta)*
+rm ou rf 	*(Deletar)*
+Clear 		*(Limpar o console)*
+
+Comandos GIT *(Sempre terá o "git" na frente do comando)*
+git init 	*(Cria repositório)*
+git clone (url) *(Clona um repositório)*
+git add arquivo *(Faz o git entender que o arquivo está ali)*, git add . (Entende o arquivo no controle de versão local)
+git status 	*(Qual é o status dos arquivos)*
+git commit 	*(Commita a ação ou em outra linguam, confirma a ação)*
+git push origin "nome, geralmente main ou master" *(Sobe para a nuvem/github)*
+git commit -m "Mensagem" *(Descrição)*
