@@ -5,44 +5,59 @@ _Projeto com o objetivo de criar um banco de dados focado no gerenciamento de sa
 Entidades e Atributos:
 
 - Funcionários
+  - PK Funcionario_ID int auto_increment,
+  - Nome varchar(50),
+  - Sobrenome varchar(50),
+  - CPF char(11),
+  - Email varchar(200),
+  - Telefone varchar(20),
+  - Data_Contratacao date,
+  - Salario_Bruto decimal(10,2),
+  - Salario_Liquido decimal(10,2),
+  - FK Endereco_Func_,
+  - FK Departamento_,
+  - FK Cargo_,
+  - FK Desconto_ID_,
+  - FK Bonus_,
+  - FK Ferias_;
 
-  - PK Funcionario_ID int auto_increment;
-  - Nome varchar(50);
-  - Sobrenome varchar(50);
-  - CPF tinyint(11);
-  - Email varchar(200);
-  - Telefone tinyint(20);
-  - Salario_Bruto decimal(10,2);
-  - FK BeneficioVA_ID int;
-  - FK BeneficioVT_ID int;
-  - FK Endereco_Func_ID int;
-  - FK Departamento_ID int;
-  - FK Cargo_ID int;
 - Departamentos
-
-  - PK Departamento_ID int auto_increment;
+  - PK Departamento_ID int auto_increment,
   - Nome_Departamento varchar(50);
+
 - Cargos
-
-  - PK Cargo_ID int auto_increment;
+  - PK Cargo_ID int auto_increment,
   - Nome_Cargo varchar(50);
-- Beneficios_VA
 
-  - PK BeneficioVA_ID int auto_increment;
-  - Nome_Beneficio varchar(30);
-  - Desconto_Porcentagem float(10,1);
-- Beneficios_VT
-  - PK BeneficioVT_ID int auto_increment;
-  - Nome_Beneficio varchar(30);
-  - Desconto_Porcentagem float(10,1);
-- Enderecos_Funcionarios
+- Endereco_Funcionarios
+  - Endereco_Func_id int auto_increment,
+  - Cep varchar(15),
+  - Logradouro varchar(50),
+  - Numero_Casa int(4),
+  - Bairro varchar(50),
+  - Cidade varchar(30),
+  - Estado char(2);
 
-  - Endereco_Func_id int auto_increment;
+- Descontos
+  - INSS char(3),
+  - FGTS char(3),
+  - Vale_Transporte char(3),
+  - Vale_Alimentacao char(3);
 
-  - Cep int(15);
-  - Logradouro varchar(50);
-  - Numero_Casa tinyint(5);
-  - Cidade varchar(30);
-  - Estado varchar(30);
-  - Bairro varchar(50);
-  - FK Funcionario_ID;
+- Bonus
+  - Bonus_id int auto_increment,
+  - Meta_Concluida char(3);
+
+- Ferias
+  - Ferias_id int auto_incremet,
+  - Inicio_Ferias date,
+  - Final_Ferias date;
+
+Observações:
+
+Descontos:
+Desconto de INSS e FGTS equivalem a 5% do salário, já o vale transporte e vale alimentação equivalem a 2,5% do salário;
+
+Bônus:
+Caso o funcionário bata a meta, ele irá ganhar 30% do salário;
+Caso não bata a meta, irá ganhar 10% do salário.
